@@ -11,7 +11,7 @@ async function main() {
 
   // Step 2: connect with wallet
   const wallet = new ethers.Wallet(
-    "0x67da2421f1a069496c8ed0f4752c215abca1564fc2e1f4b9644a3c2dfac9828b",
+    "0xc35a3a58c9f5467e95e727f40d0f71ee6eec356d722260c3240a01e44add0da0",
     provider
   );
 
@@ -33,7 +33,14 @@ async function main() {
 
   const currentFavoriteNumber = await contract.retrieve(); // Access the view function
 
-  console.log(currentFavoriteNumber);
+  console.log(`Current Favourite Number: ${currentFavoriteNumber.toString()}`);
+
+  const transactionResponse = await contract.store("7"); // calling the store function and pass 7
+  const transactionReceipt = await transactionResponse.wait(1); // wait 1 block after the store call is finished.
+
+  const updatedFavoriteNumber = await contract.retrieve();
+  console.log(`Updated favorite number is: ${updatedFavoriteNumber}`);
+  // await contract.sto
   // console.log(contract);
 
   // console.log("Let's deploy with only transaction data!");
