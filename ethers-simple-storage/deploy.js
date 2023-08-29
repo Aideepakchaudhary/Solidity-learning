@@ -1,5 +1,6 @@
 const ethers = require("ethers");
 const fs = require("fs-extra");
+require("dotenv").config();
 
 async function main() {
   // http://127.0.0.1:7545
@@ -10,10 +11,7 @@ async function main() {
   );
 
   // Step 2: connect with wallet
-  const wallet = new ethers.Wallet(
-    "0xc35a3a58c9f5467e95e727f40d0f71ee6eec356d722260c3240a01e44add0da0",
-    provider
-  );
+  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider); // to access from env file we use process.env
 
   // we need ABI and Binary to interact with any contract.
 
