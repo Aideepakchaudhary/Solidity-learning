@@ -1,5 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
+require("./tasks/block-number");
 // require("@nomiclabs/hardhat-etherscan");
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL;
