@@ -11,3 +11,9 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+To deploy the contract on testnet from hardhat use:
+
+```
+yarn hardhat run scripts/deploy.js --network sepolia
+```
