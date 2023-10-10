@@ -17,3 +17,13 @@ To deploy the contract on testnet from hardhat use:
 ```
 yarn hardhat run scripts/deploy.js --network sepolia
 ```
+
+Here we have define the task to get the current blockNumber. To run that, we use:
+
+```
+yarn hardhat block-number --network sepolia
+```
+
+In this case, We'll get sepolia current block Number.
+
+If we need to run spme script on the hardhat, we can do it by : `yarn hardhat run scripts/deploy.js --network localhost`
