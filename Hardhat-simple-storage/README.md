@@ -29,3 +29,6 @@ In this case, We'll get sepolia current block Number.
 If we need to run some script on the hardhat local host, we can do it by : `yarn hardhat run scripts/deploy.js --network localhost`
 
 To clear the cache, run this command: `yarn hardhat clean`
+
+To run the test, run this command:
+`yarn hardhat test`
