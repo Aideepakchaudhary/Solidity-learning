@@ -32,3 +32,9 @@ To clear the cache, run this command: `yarn hardhat clean`
 
 To run the test, run this command:
 `yarn hardhat test`
+
+To run the specific test, you can provide the keyword that should be uniue.
+`yarn hardhat test --grep KEYWORD`
+
+Add `hardhat gas reporter` to get the exact amount of gas each function is using. To add this run this command:
+`yarn add hardhat-gas-reporter --dev`
