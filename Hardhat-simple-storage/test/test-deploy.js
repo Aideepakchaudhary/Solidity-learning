@@ -20,4 +20,11 @@ describe("SimpleStorage", function () {
 
         assert.equal(currentValue.toString(), expectedValue);
     });
+
+    it("Should update when we call store", async function () {
+        await simpleStorage.store("7");
+        const expectedValue = await simpleStorage.retrieve();
+
+        assert.equal(expectedValue.toString(), "7");
+    });
 });
