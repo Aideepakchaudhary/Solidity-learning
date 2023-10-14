@@ -38,3 +38,7 @@ To run the specific test, you can provide the keyword that should be uniue.
 
 Add `hardhat gas reporter` to get the exact amount of gas each function is using. To add this run this command:
 `yarn add hardhat-gas-reporter --dev`
+
+To check if we have missed any line for testing, we use `solidity coverage`.
+
+Install Solidity coverage by : `yarn add --dev solidity-coverage`
